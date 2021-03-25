@@ -23,3 +23,16 @@ jobs:
       run: |
         pylint `ls -R|grep .py$|xargs`
         pytest app.py
+    - name: Build with Azure
+      uses: azure/webapps-build@v1
+      with:
+        platform: python
+    - name: Deploy to Azure
+      uses: azure/webapps-deploy@v1
+        app-name: 'devbook-luke.azurewebsites'
+        slot-name: 'production'
+        publish-profile: {{ secret.azurePublishProfile}}
+    
+    
+      
+    
