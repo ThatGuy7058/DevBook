@@ -29,9 +29,10 @@ jobs:
         platform: python
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v1
-        app-name: 'devbook-luke.azurewebsites'
+      with:
+        app-name: 'devbook-luke'
         slot-name: 'production'
-        publish-profile: {{ secret.azurePublishProfile}}
+        publish-profile: ${{ secrets.azurePublishProfile}}
     
     
       
