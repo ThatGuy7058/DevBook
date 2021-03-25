@@ -22,6 +22,8 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
+    - name: Test with PyTest
+      run: |
         pytest app.py
     - name: Build with Azure
       uses: azure/appservice-build@v1
