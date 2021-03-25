@@ -31,4 +31,3 @@ def test_generate_names_checktype():
     """Testing the Generate Names Function Return Type"""
     namelist2 = generate_names(101)
     assert isinstance(namelist2, list)
-    
