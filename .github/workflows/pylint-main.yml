@@ -24,7 +24,7 @@ jobs:
         pylint `ls -R|grep .py$|xargs`
         pytest app.py
     - name: Build with Azure
-      uses: azure/webapps-build@v1
+      uses: azure/appservice-build@v1
       with:
         platform: python
     - name: Deploy to Azure
