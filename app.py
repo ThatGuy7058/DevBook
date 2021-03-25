@@ -21,4 +21,14 @@ app = Flask(__name__)
 def index():
     """Render home page"""
     return render_template("index.html", namelist=namelist)
+
+def test_generate_names():
+    """Testing the Generated Names"""
+    namelist1 = generate_names(101)
+    assert len(namelist1) == 101
+
+def test_generate_names_checktype():
+    """Testing the Generate Names Function Return Type"""
+    namelist2 = generate_names(101)
+    assert isinstance(namelist2, list)
     
