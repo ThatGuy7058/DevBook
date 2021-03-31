@@ -35,7 +35,3 @@ jobs:
         app-name: 'devbook-staging-Luke'
         slot-name: 'staging'
         publish-profile: ${{ secrets.azurePublishProfile_staging}}
-    
-    
-      
-    
