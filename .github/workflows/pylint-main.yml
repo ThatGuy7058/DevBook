@@ -2,7 +2,7 @@ name: Pylint-Main
 
 on:
   push:
-    branches: [dev]
+    branches: [staging]
 
 jobs:
   build:
@@ -32,10 +32,6 @@ jobs:
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'DevBook-devB-Luke'
-        slot-name: 'dev'
-        publish-profile: ${{ secrets.azurePublishProfile_dev}}
-    
-    
-      
-    
+        app-name: 'devbook-staging-Luke'
+        slot-name: 'staging'
+        publish-profile: ${{ secrets.azurePublishProfile_staging}}
